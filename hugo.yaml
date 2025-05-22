@@ -1,0 +1,138 @@
+baseURL: "https://adityatelange.github.io/"
+defaultContentLanguage: "zh"
+title: hugo-PaperMod
+
+theme: ["hugo-PaperMod"]
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainsections: ["posts", "papermod"]
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+pagination:
+  disableAliases: false
+  pagerSize: 5
+
+languages:
+  zh:
+    languageName: "中文"
+    weight: 1
+    title: Demo
+    taxonomies:
+      category: cn_categories
+      tag: cn_tags
+      series: cn_series
+    menu:
+      main:
+        - name: 归档
+          url: archives
+          weight: 5
+        - name: 搜索
+          url: search/
+          weight: 10
+        - name: 标签
+          url: tags/
+          weight: 10
+        - name: 维基
+          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+
+  en:
+    languageName: "English"
+    weight: 3
+    title: Demo
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: WiKi
+          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+
+  fr:
+    languageName: "fr"
+    weight: 5
+    title: PaperModL2
+    taxonomies:
+      category: FRcategories
+      tag: FRtags
+      series: FRseries
+    menu:
+      main:
+        - name: Archive
+          url: archives/
+          weight: 5
+        - name: FRTags
+          url: frtags
+          weight: 10
+        - name: FRCategories
+          url: frcategories
+          weight: 10
+        - name: FRSeries
+          url: frseries
+          weight: 10
+        - name: NullLink
+          url: "#"
+
+    # custom params for each language should be under [langcode].parms - hugo v0.120.0
+    params:
+      languageAltTitle: French
+      profileMode:
+        enabled: true
+        title: PaperMod
+        imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+        imageTitle: ProfileMode image
+        # imageWidth: 120
+        # imageHeight: 120
+        subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+        buttons:
+          - name: Blog
+            url: posts
+          - name: Profile Mode
+            url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
+
+  fa:
+    languagedirection: rtl
+    weight: 7
+    title: PaperMod RTL
+    taxonomies:
+      category: FAcategories
+      tag: FAtags
+      series: FAseries
+    menu:
+      main:
+        - name: FATags
+          url: fatags
+          weight: 10
+    # custom params for each language should be under [langcode].parms - hugo v0.120.0
+    params:
+      homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: Welcome to RTL layout
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  author: Theme PaperMod
